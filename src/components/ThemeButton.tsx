@@ -1,6 +1,6 @@
 "use client";
 import { useTheme } from "next-themes";
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 function ThemeButton() {
   const { theme, setTheme } = useTheme();
