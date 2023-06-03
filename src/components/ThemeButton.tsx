@@ -12,18 +12,20 @@ function ThemeButton() {
   }, [setMyvar, theme]);
   return (
     <div>
-      <button
-        onClick={() => {
-          console.log(theme);
-          const val = theme === "light" ? "dark" : "light";
-          console.log(val);
-          setTheme(val);
-        }}
-        className="w-full first-letter:rounded bg-gray-900 px-2 py-4 text-sm text-white hover:opacity-80 dark:bg-white dark:text-gray-900"
-      >
-        Toggle Theme
-      </button>
-      <div className="w-full text-center p-4">theme = {myvar}</div>
+      <div className="flex justify-center py-8">
+        <button
+          onClick={() => {
+            console.log(theme);
+            const val = theme === "light" ? "dark" : "light";
+            console.log(val);
+            setTheme(val);
+          }}
+          className="bg-gray-700 px-2 py-2 text-sm text-white first-letter:rounded hover:opacity-80"
+        >
+          Toggle Theme
+        </button>
+      </div>
+      <div className="flex w-full justify-center text-sm p-4 py-4">Current theme = {myvar}</div>
     </div>
   );
 }
